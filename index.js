@@ -1,4 +1,5 @@
 const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
 const lengthItem = document.getElementById("lengthItem");
 const numberItem = document.getElementById("numberItem");
 const uppercaseItem = document.getElementById("uppercaseItem");
@@ -30,4 +31,11 @@ password.addEventListener("keydown", (event) => {
         uppercaseItem.classList.remove("valid");
     }
 
+});
+togglePassword.addEventListener("click", ()=> {
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
 });
